@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lung Cancer Prediction</title>
+</head>
+<body>
+
+<h2>Lung Cancer Prediction System</h2>
+
+<form action="/predict" method="post">
+
+    Gender:
+    <select name="gender" required>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select>
+    <br><br>
+
+    Age:
+    <input type="number" name="age" required>
+    <br><br>
+
+    Smoking (0/1): <input type="number" name="smoking" required><br><br>
+    Yellow Fingers (0/1): <input type="number" name="yellow_fingers" required><br><br>
+    Anxiety (0/1): <input type="number" name="anxiety" required><br><br>
+    Peer Pressure (0/1): <input type="number" name="peer_pressure" required><br><br>
+    Chronic Disease (0/1): <input type="number" name="chronic_disease" required><br><br>
+    Fatigue (0/1): <input type="number" name="fatigue" required><br><br>
+    Allergy (0/1): <input type="number" name="allergy" required><br><br>
+    Wheezing (0/1): <input type="number" name="wheezing" required><br><br>
+    Alcohol Consuming (0/1): <input type="number" name="alcohol" required><br><br>
+    Coughing (0/1): <input type="number" name="coughing" required><br><br>
+    Shortness of Breath (0/1): <input type="number" name="shortness_of_breath" required><br><br>
+    Swallowing Difficulty (0/1): <input type="number" name="swallowing_difficulty" required><br><br>
+    Chest Pain (0/1): <input type="number" name="chest_pain" required><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+    <h3>Prediction Result: {{ prediction }}</h3>
+{% endif %}
+
+</body>
+</html>
